@@ -21,7 +21,7 @@ Perfetto se vivi vicino a una stazione, se aspetti qualcuno o se vuoi farti i ca
 
 Questa è una card già funzionante, che puoi copiare direttamente in Lovelace:
 
-1. **Sostituisci le entità** con quelle generate dalla tua integrazione (`CTRL + F` per fare replace al volo)
+1. **Sostituisci le 3 entità nella card** con quelle generate dalla tua integrazione (`CTRL + F` per fare replace al volo)
 2. Cambia il nome della città nel primo blocco di testo (`markdown`)
 3. Goditi l’orario ferroviario direttamente in dashboard
 
