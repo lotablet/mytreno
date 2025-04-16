@@ -2,14 +2,13 @@
   "domain": "mytreno",
   "name": "MyTreno",
   "version": "1.0.0",
-  "documentation": "https://github.com/LoTableT/mytreno",
+  "documentation": "https://github.com/lotablet/mytreno",
+  "issue_tracker": "https://github.com/lotablet/mytreno/issues",
   "dependencies": [],
-  "codeowners": [
-    "@LoTableT"
-  ],
-  "requirements": [
-    "requests"
-  ],
+  "codeowners": ["@lotablet"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
   "config_flow": true,
-  "iot_class": "cloud_polling"
+  "icon": "images/icon.png",
+  "logo": "images/logo.png"
 }
