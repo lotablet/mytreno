@@ -1,0 +1,14 @@
+{
+  "title": "MyTreno",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configura MyTreno",
+        "description": "Inserisci il codice della stazione (es. S06000)",
+        "data": {
+          "station_id": "ID Stazione"
+        }
+      }
+    }
+  }
+}

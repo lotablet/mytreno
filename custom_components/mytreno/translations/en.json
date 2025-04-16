@@ -1,0 +1,14 @@
+{
+  "title": "ViaggiaTreno",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure ViaggiaTreno",
+        "description": "Enter the station code (e.g., S06000)",
+        "data": {
+          "station_id": "Station ID"
+        }
+      }
+    }
+  }
+}

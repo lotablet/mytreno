@@ -1,0 +1,15 @@
+{
+  "domain": "mytreno",
+  "name": "MyTreno",
+  "version": "1.0.0",
+  "documentation": "https://github.com/LoTableT/mytreno",
+  "dependencies": [],
+  "codeowners": [
+    "@LoTableT"
+  ],
+  "requirements": [
+    "requests"
+  ],
+  "config_flow": true,
+  "iot_class": "cloud_polling"
+}
