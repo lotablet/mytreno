@@ -1,0 +1,8 @@
+{
+  "name": "MyTreno",
+  "content_in_root": false,
+  "domains": [
+    "sensor"
+  ],
+  "homeassistant": "2023.0.0"
+}

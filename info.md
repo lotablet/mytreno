@@ -1,0 +1,1 @@
+Questa integrazione permette di visualizzare partenze e arrivi in tempo reale dalle stazioni ferroviarie italiane, usando ViaggiaTreno.
