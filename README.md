@@ -58,8 +58,9 @@ https://github.com/lotablet/mytreno-card/
 
 
 3. Installa `MyTreno Card`
-4. Dopo il riavvio, aggiungi questa card in Lovelace:
+4. Aggiungi la card in Lovelace (la trovi nella lista)
 
+La card richiede solo il sensore creato tramite l'integrazione:
 ```
 type: custom:my-treno-card
 sensor: sensor.mytreno_NOMECITTA
