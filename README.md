@@ -1,11 +1,8 @@
 # ![icon](https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/icon.png) MyTreno  
 ![logo](https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/logo.png)
 
-> Integrazione Home Assistant per monitorare in tempo reale **partenze e arrivi dei treni italiani** tramite il servizio **ViaggiaTreno** di Trenitalia.
 
----
-
-**MyTreno** ti permette di tenere d'occhio i treni della tua stazione preferita, direttamente da Lovelace.  
+**MyTreno** ti permette di monitorare in tempo reale **partenze e arrivi dei treni italiani** tramite il servizio **ViaggiaTreno** di Trenitalia, nella tua Lovelace!
 
 ---
 
@@ -67,3 +64,5 @@ https://github.com/lotablet/mytreno-card/
 type: custom:my-treno-card
 sensor: sensor.mytreno_NOMECITTA
 ```
+
+![gif](https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/sample_card.gif)
