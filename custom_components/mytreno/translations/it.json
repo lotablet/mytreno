@@ -4,9 +4,9 @@
     "step": {
       "user": {
         "title": "Configura MyTreno",
-        "description": "Inserisci il codice della stazione (es. S06000)",
+        "description": "Inserisci la città",
         "data": {
-          "station_id": "ID Stazione"
+          "station_name": "Nome stazione"
         }
       }
     }
