@@ -49,7 +49,7 @@ https://github.com/lotablet/mytreno
 
 ## 📦 Installazione via HACS
 
-1. Vai in HACS → Frontend → Menu ⋮ → "Custom repositories"
+1. Vai in HACS → Frontend → Menu ⋮ → "Archivi digitali personalizzati"
 2. Inserisci l'URL della repo e imposta tipo: `Lovelace`:
 
 ```
