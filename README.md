@@ -22,7 +22,7 @@ Perfetto se vivi vicino a una stazione, se aspetti qualcuno o se vuoi farti i ca
 ## 📦 Installazione tramite HACS
 
 1. Vai in **HACS → Integrazioni**
-2. Clicca su **(⋮) → Aggiungi repository personalizzato**
+2. Clicca su Menu **⋮ → Aggiungi repository personalizzato**
 3. Inserisci questo URL e scegli tipo **"Integrazione"** :
 ```
 https://github.com/lotablet/mytreno
@@ -53,7 +53,7 @@ https://github.com/lotablet/mytreno
 
 ## 📦 Installazione via HACS
 
-1. Vai in HACS → Frontend → Menu (⋮) → "Custom repositories"
+1. Vai in HACS → Frontend → Menu ⋮ → "Custom repositories"
 2. Inserisci l'URL della repo e imposta tipo: `Lovelace`:
 
 ```
