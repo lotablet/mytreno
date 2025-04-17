@@ -6,7 +6,6 @@
 ---
 
 **MyTreno** ti permette di tenere d'occhio i treni della tua stazione preferita, direttamente da Lovelace.  
-Perfetto se vivi vicino a una stazione, se aspetti qualcuno o se vuoi farti i cazzi della Trenitalia per vedere quanti ritardi ci sono 😄
 
 ---
 
