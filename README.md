@@ -65,5 +65,5 @@ https://github.com/lotablet/mytreno-card/
 
 ```
 type: custom:my-treno-card
-sensor: sensor.mytreno_laspezia
+sensor: sensor.mytreno_NOMECITTA
 ```
