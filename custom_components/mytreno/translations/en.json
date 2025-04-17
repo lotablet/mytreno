@@ -4,9 +4,9 @@
     "step": {
       "user": {
         "title": "Configure ViaggiaTreno",
-        "description": "Enter the station code (e.g., S06000)",
+        "description": "Enter city",
         "data": {
-          "station_id": "Station ID"
+          "station_name": "Station Name"
         }
       }
     }
