@@ -11,7 +11,7 @@
 
 ## ✅ Funzionalità attuali
 
-- Recupero automatico delle **partenze** e degli **arrivi** da qualsiasi stazione italiana (basta conoscere il codice `SXXXXX`)
+- Recupero automatico delle **partenze** e degli **arrivi** da qualsiasi stazione italiana
 - Integrazione configurabile **via UI** da *Impostazioni → Integrazioni*
 - Sensore aggiornato in tempo reale con treni in transito
 - Card Lovelace pronta all’uso (per ora in versione `config-template-card`, ma in arrivo quella ufficiale da **HACS**)
