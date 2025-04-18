@@ -270,6 +270,7 @@ STATIONS = {
   "Bistagno": "S00870",
   "Bisuschio Viggiu": "S01202",
   "Bitetto Palo Del Colle": "S11501",
+  "Bitritto": "S11252",
   "Bivio Cargnacco": "S03036",
   "Bivio Castelrosso": "S00027",
   "Bivio D`Aurisina": "S03313",
