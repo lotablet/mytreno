@@ -1840,7 +1840,7 @@ STATIONS = {
   "Palermo Notarbartolo": "S12134",
   "Palermo S. Lorenzo": "S12132",
   "Palermo Tommaso Natale": "S12131",
-  "Palermo Vespri": "S12135"
+  "Palermo Vespri": "S12135",
   "Palestro": "S00271",
   "Palidano": "S02343",
   "Palizzi": "S11859",
