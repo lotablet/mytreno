@@ -5,7 +5,7 @@
 **MyTreno** ti permette di monitorare in tempo reale **partenze e arrivi dei treni italiani** tramite il servizio **ViaggiaTreno** di Trenitalia, nella tua Lovelace!
 
 
-Se nel componente manca la tua stazione preferita, apri pure una issue [QUI](https://github.com/lotablet/mytreno/issues/1)
+Se nel componente manca la tua stazione preferita,[SCRIVI QUI](https://github.com/lotablet/mytreno/issues/1)
 ---
 
 ## ✅ Funzionalità attuali
