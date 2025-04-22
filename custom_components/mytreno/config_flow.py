@@ -347,6 +347,7 @@ STATIONS = {
   "Borore": "S12872",
   "Boschi S.Anna": "S02390",
   "Bosco Redole": "S09452",
+  "Bosconero": "S00882",
   "Boscoreale": "S09754",
   "Botricello": "S11829",
   "Bova Marina": "S11860",
