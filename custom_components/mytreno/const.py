@@ -1,3 +1,3 @@
 
 DOMAIN = "mytreno"
-URL_BASE = "https://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno"
+URL_BASE = "https://www.viaggiatreno.it/infomobilita"
