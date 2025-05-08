@@ -69,5 +69,3 @@ La card richiede solo il sensore creato tramite l'integrazione:
 type: custom:my-treno-card
 sensor: sensor.mytreno_NOMECITTA
 ```
-
-![gif](https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/sample_card.gif)
