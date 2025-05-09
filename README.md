@@ -46,7 +46,7 @@ https://github.com/lotablet/mytreno
 
 ## MyTreno Card
 
-![version](https://img.shields.io/badge/version-1.0-blue)
+![version](https://img.shields.io/badge/version-1.1.0-blue)
 ![hacs](https://img.shields.io/badge/HACS-default-orange)
 
 > Card Lovelace per visualizzare partenze e arrivi dei treni usando ViaggiaTreno.
