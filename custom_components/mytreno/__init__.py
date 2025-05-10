@@ -85,11 +85,17 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     if entry.version == 0:
         new_data = {**entry.data}
+
+        # Se mancano entrambi, entry è rotta → la blocchiamo
+        if "station_id" not in new_data and "train_number" not in new_data:
+            _LOGGER.error("MyTreno: Entry vuota o corrotta, migrazione annullata")
+            return False  # blocca setup dell'entry rotta
+
+        # Aggiunta train_number se mancante (vecchie stazioni)
         if "train_number" not in new_data:
             new_data["train_number"] = None
 
-        hass.config_entries.async_update_entry(entry, data=new_data)
-        entry.version = 1
+        hass.config_entries.async_update_entry(entry, data=new_data, version=1)
         _LOGGER.info("MyTreno migrato da 0 → 1")
 
     return True
