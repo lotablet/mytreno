@@ -8,7 +8,18 @@
         "data": {
           "station_name": "Nome stazione"
         }
+      },
+      "treno": {
+        "title": "Tracciamento Treno",
+        "description": "Inserisci il numero del treno senza lettere",
+        "data": {
+          "train_number": "N° treno: se 'REG1234' inserisci solo '1234'"
+        }
       }
+    },
+    "error": {
+      "invalid_station": "Stazione non valida",
+      "invalid_train_number": "Numero treno non valido"
     }
   }
 }
