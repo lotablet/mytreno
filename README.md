@@ -18,6 +18,7 @@ Se nel componente manca la tua stazione preferita [SCRIVI QUI](https://github.co
 - Integrazione configurabile **via UI** da *Impostazioni → Integrazioni*
 - Sensore aggiornato in tempo reale con treni in transito
 - Card Lovelace pronta all’uso
+- 🔥**Nuova Feature** - Tracking dei singoli treni nel popup 🔥
 
 ---
 
