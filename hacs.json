@@ -4,5 +4,6 @@
   "domains": [
     "sensor"
   ],
-  "homeassistant": "2023.0.0"
+  "homeassistant": "2023.0.0",
+  "render_readme": true
 }
