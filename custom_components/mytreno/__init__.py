@@ -2,9 +2,11 @@ import voluptuous as vol
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers import config_validation as cv
+import logging
 
 from .const import DOMAIN, SERVICE_SET_TRAIN
 
+_LOGGER = logging.getLogger(__name__)
 PLATFORMS = ["sensor"]
 
 SET_TRAIN_SCHEMA = vol.Schema({
@@ -12,10 +14,12 @@ SET_TRAIN_SCHEMA = vol.Schema({
     vol.Optional("entry_id"): cv.string,
 })
 
+
 async def async_setup(hass: HomeAssistant, _: dict) -> bool:
     """Serve solo a far esistere il dominio prima delle ConfigEntry."""
     hass.data.setdefault(DOMAIN, {})
     return True
+
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Setup della singola config entry."""
@@ -24,6 +28,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
+    # Registra il servizio se non esiste già
     if not hass.services.has_service(DOMAIN, SERVICE_SET_TRAIN):
 
         async def _handle_set_train(call: ServiceCall) -> None:
@@ -55,6 +60,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     return True
 
+
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unloads a config entry."""
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
@@ -64,7 +70,26 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     return unload_ok
 
+
 async def async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Reloads a config entry."""
     await async_unload_entry(hass, entry)
     return await async_setup_entry(hass, entry)
+
+
+# ───────────────────────────────────────────────────────────────
+# MIGRATION: aggiorna config entry se versione è vecchia
+# ───────────────────────────────────────────────────────────────
+async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    _LOGGER.info("Avvio migrazione MyTreno da versione %s", entry.version)
+
+    if entry.version == 0:
+        new_data = {**entry.data}
+        if "train_number" not in new_data:
+            new_data["train_number"] = None
+
+        hass.config_entries.async_update_entry(entry, data=new_data)
+        entry.version = 1
+        _LOGGER.info("MyTreno migrato da 0 → 1")
+
+    return True
