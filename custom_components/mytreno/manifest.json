@@ -1,7 +1,7 @@
 {
   "domain": "mytreno",
   "name": "MyTreno",
-  "version": "v2.1.2",
+  "version": "v2.1.3",
   "config_flow": true,
   "requirements": [],
   "dependencies": [],
