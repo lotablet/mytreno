@@ -17,7 +17,7 @@ def get_stations():
 
 
 class MyTrenoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-  VERSION = 2
+  VERSION = 3
 
   async def async_step_user(self, user_input=None):
     if user_input is not None:
