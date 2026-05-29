@@ -47,7 +47,7 @@ def roman_to_int(roman: str):
 
 
 async def fetch_data(hass: HomeAssistant, station_id: str):
-    """Ultime 10 partenze e arrivi di una stazione."""
+    """Partenze e arrivi di una stazione (tutti i treni disponibili dall'API)."""
     timestamp = build_timestamp()
     urls = {
         "partenze": f"{URL_BASE}/partenze/{station_id}/{timestamp}",
@@ -77,7 +77,7 @@ async def fetch_data(hass: HomeAssistant, station_id: str):
                     else "binarioEffettivoArrivoDescrizione"
                 )
 
-                for treno in trains_raw[:10]:
+                for treno in trains_raw:
                     data[kind].append(
                         {
                             "treno": treno.get("compNumeroTreno", "??"),
