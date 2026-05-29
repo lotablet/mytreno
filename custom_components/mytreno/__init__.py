@@ -49,7 +49,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                 if container is not None:
                     container["train_number"] = tn
                     if coordinator:
-                        await coordinator.async_request_refresh()
+                        try:
+                            await coordinator.async_refresh()
+                        except Exception:
+                            _LOGGER.warning("MyTreno: refresh fallito per treno %s", tn)
 
         hass.services.async_register(
             DOMAIN,

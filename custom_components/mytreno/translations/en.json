@@ -1,14 +1,41 @@
 {
-  "title": "ViaggiaTreno",
+  "title": "MyTreno",
   "config": {
     "step": {
       "user": {
-        "title": "Configure ViaggiaTreno",
-        "description": "Enter city",
+        "title": "Configure MyTreno",
+        "menu_options": {
+          "stazione": "Monitor station",
+          "treno": "Train tracking"
+        }
+      },
+      "stazione": {
+        "title": "Search station",
+        "description": "Type the name of the station you want to monitor (or part of it), then click Next to see the matching results. You can use partial names, for example: \"Rome\", \"Mil\", \"Naples Central\".",
         "data": {
-          "station_name": "Station Name"
+          "search": "Station name"
+        }
+      },
+      "stazione_risultati": {
+        "title": "Select station",
+        "description": "{hint}",
+        "data": {
+          "station_name": "Station"
+        }
+      },
+      "treno": {
+        "title": "Train Tracking",
+        "description": "Enter the train number without letters",
+        "data": {
+          "train_number": "Train no.: if 'REG1234' enter only '1234'"
         }
       }
+    },
+    "error": {
+      "invalid_station": "Invalid station",
+      "invalid_train_number": "Invalid train number",
+      "query_too_short": "Enter at least 2 characters",
+      "no_results": "No stations found, try a different search term"
     }
   }
 }

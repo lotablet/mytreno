@@ -19,31 +19,54 @@ def get_stations():
 class MyTrenoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
   VERSION = 3
 
-  async def async_step_user(self, user_input=None):
-    if user_input is not None:
-      mode = user_input["mode"]
-      if mode == "stazione":
-        return await self.async_step_stazione()
-      elif mode == "treno":
-        return await self.async_step_treno()
+  def __init__(self):
+    self._filtered_stations: dict = {}
+    self._search_query: str = ""
 
-    return self.async_show_form(
+  async def async_step_user(self, user_input=None):
+    return self.async_show_menu(
       step_id="user",
-      data_schema=vol.Schema({
-        vol.Required("mode"): vol.In({
-          "stazione": "Monitor stazione",
-          "treno": "Tracciamento treno"
-        })
-      })
+      menu_options=["stazione", "treno"],
     )
 
   async def async_step_stazione(self, user_input=None):
+    """Step 1: campo di ricerca testuale."""
     errors = {}
-    stations = get_stations()
+
+    if user_input is not None:
+      query = user_input.get("search", "").strip()
+      if len(query) < 2:
+        errors["search"] = "query_too_short"
+      else:
+        stations = get_stations()
+        query_lower = query.lower()
+        matches = {k: v for k, v in stations.items() if query_lower in k.lower()}
+        if not matches:
+          errors["search"] = "no_results"
+        else:
+          self._filtered_stations = matches
+          self._search_query = query
+          return await self.async_step_stazione_risultati()
+
+    return self.async_show_form(
+      step_id="stazione",
+      data_schema=vol.Schema({
+        vol.Required("search"): str,
+      }),
+      errors=errors,
+      description_placeholders={"hint": "es. Roma, Milano, Napoli…"},
+    )
+
+  async def async_step_stazione_risultati(self, user_input=None):
+    """Step 2: scelta dalla lista filtrata."""
+    errors = {}
+    MAX_RESULTS = 30
+    options = sorted(self._filtered_stations.keys())[:MAX_RESULTS]
+    total = len(self._filtered_stations)
 
     if user_input is not None:
       station_name = user_input.get("station_name")
-      station_id = stations.get(station_name)
+      station_id = self._filtered_stations.get(station_name)
       if station_id:
         return self.async_create_entry(
           title=station_name,
@@ -56,12 +79,20 @@ class MyTrenoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
       else:
         errors["station_name"] = "invalid_station"
 
+    hint = (
+      f"Trovate {total} stazioni per \"{self._search_query}\" — mostrate le prime {MAX_RESULTS}. "
+      "Torna indietro per affinare la ricerca."
+      if total > MAX_RESULTS
+      else f"Trovate {total} stazioni per \"{self._search_query}\"."
+    )
+
     return self.async_show_form(
-      step_id="stazione",
+      step_id="stazione_risultati",
       data_schema=vol.Schema({
-        vol.Required("station_name"): vol.In(sorted(stations.keys()))
+        vol.Required("station_name"): vol.In(options),
       }),
-      errors=errors
+      errors=errors,
+      description_placeholders={"hint": hint},
     )
 
   async def async_step_treno(self, user_input=None):

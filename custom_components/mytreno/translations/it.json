@@ -4,9 +4,23 @@
     "step": {
       "user": {
         "title": "Configura MyTreno",
-        "description": "Inserisci la città",
+        "menu_options": {
+          "stazione": "Monitor stazione",
+          "treno": "Tracciamento treno"
+        }
+      },
+      "stazione": {
+        "title": "Cerca la stazione",
+        "description": "Digita il nome della stazione che vuoi monitorare (o parte di esso), poi clicca su Avanti per visualizzare i risultati corrispondenti. Puoi usare nomi parziali, ad esempio: \"Roma\", \"Mil\", \"Napoli Centrale\".",
         "data": {
-          "station_name": "Nome stazione"
+          "search": "Nome stazione"
+        }
+      },
+      "stazione_risultati": {
+        "title": "Seleziona la stazione",
+        "description": "{hint}",
+        "data": {
+          "station_name": "Stazione"
         }
       },
       "treno": {
@@ -19,7 +33,9 @@
     },
     "error": {
       "invalid_station": "Stazione non valida",
-      "invalid_train_number": "Numero treno non valido"
+      "invalid_train_number": "Numero treno non valido",
+      "query_too_short": "Inserisci almeno 2 caratteri",
+      "no_results": "Nessuna stazione trovata, prova con un altro termine"
     }
   }
 }
