@@ -5,6 +5,11 @@
   <img src="https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/logo.png" alt="logo" />
 </p>
 
+**DISCONTINUED** 
+A causa di altri impegni non potrò più aggiornare questo componente.
+
+Grazie a tutti del supporto 🙏🏻❤️
+
 
 **MyTreno** ti permette di monitorare in tempo reale **partenze e arrivi dei treni italiani** tramite il servizio **ViaggiaTreno** di Trenitalia, nella tua Lovelace!
 
