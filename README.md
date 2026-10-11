@@ -1,12 +1,16 @@
+# **DISCONTINUED** 
+
+A causa di altri impegni non potrò più aggiornare questo componente.
+
+Grazie a tutti del supporto 🙏🏻❤️
+
+
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/lotablet)
 
 # ![icon](https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/icon.png) MyTreno  
 <p align="center">
   <img src="https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/logo.png" alt="logo" />
 </p>
-
-**DISCONTINUED** 
-A causa di altri impegni non potrò più aggiornare questo componente.
 
 Grazie a tutti del supporto 🙏🏻❤️
 
