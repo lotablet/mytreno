@@ -12,8 +12,6 @@ Grazie a tutti del supporto 🙏🏻❤️
   <img src="https://github.com/lotablet/mytreno/blob/main/custom_components/mytreno/images/logo.png" alt="logo" />
 </p>
 
-Grazie a tutti del supporto 🙏🏻❤️
-
 
 **MyTreno** ti permette di monitorare in tempo reale **partenze e arrivi dei treni italiani** tramite il servizio **ViaggiaTreno** di Trenitalia, nella tua Lovelace!
 
